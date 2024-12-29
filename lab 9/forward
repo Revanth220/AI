@@ -32,10 +32,7 @@ def forward_chaining():
         print(f"Inferred: Hostile(A)")
 
     # 4. Now, check if the goal is reached (i.e., if 'Criminal(Robert)' can be inferred)
-    if ('American(Robert)' in KB and 
-        'Weapon(T1)' in KB and 
-        'Sells(Robert, T1, A)' in KB and 
-        'Hostile(A)' in KB):
+    if 'American(Robert)' in KB and 'Weapon(T1)' in KB and 'Sells(Robert, T1, A)' in KB and 'Hostile(A)' in KB:
         KB.add('Criminal(Robert)')
         print("Inferred: Criminal(Robert)")
 
@@ -47,3 +44,5 @@ def forward_chaining():
 
 # Run forward chaining to attempt to derive the conclusion
 forward_chaining()
+
+
